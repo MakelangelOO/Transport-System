@@ -1,5 +1,5 @@
 import {Router} from 'express'
-import { crearPersona, actualizarPersona, buscarPersona, eliminarPersona } from '../application/persona.controlador'
+import { crearPersona, actualizarPersona, buscarPersona, eliminarPersona } from '../controllers/persona.controlador'
 
 
 const personaRouter = Router()

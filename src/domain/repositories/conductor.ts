@@ -1,7 +1,7 @@
 import {Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, BaseEntity, OneToMany, OneToOne, JoinColumn, ManyToOne } from 'typeorm'
-import { Persona } from './persona';
-import { Cargamento } from './cargamento';
-import { Categoria } from './categoria';
+import { Persona } from './persona'
+import { Cargamento } from './cargamento'
+import { Categoria } from './categoria'
 
 
 @Entity('conductor')
@@ -10,10 +10,7 @@ export class Conductor extends BaseEntity {
     id: number
 
     @Column()
-    categoria_superior_pase: number
-
-    @Column()
-    vigencia_pase: Date;
+    vigencia_pase: Date
 
     @Column({default: true})
     actualmente_trabajando: boolean

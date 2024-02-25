@@ -21,9 +21,6 @@ export class Pedido extends BaseEntity {
     @Column()
     fecha_hora_entrega: Date
 
-    @Column()
-    status: number
-
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     fecha_creacion: Date
 

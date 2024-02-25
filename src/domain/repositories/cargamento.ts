@@ -11,19 +11,19 @@ export class Cargamento extends BaseEntity {
     id: number
 
     @Column()
-    fecha_inicial:Date
+    fecha_inicial: Date
 
     @Column()
-    fecha_final:Date
+    fecha_final: Date
 
     @OneToMany(() => Pedido, pedido => pedido.cargamento)
     pedidos:Pedido[]
 
-    @ManyToOne(() => Vehiculo, vehiculo => vehiculo.cargamentos)
+    @ManyToOne(() => Vehiculo, vehiculo => vehiculo.cargamentos, {nullable: true})
     @JoinColumn()
     vehiculo: Vehiculo
 
-    @ManyToOne(() => Conductor, conductor => conductor.cargamentos)
+    @ManyToOne(() => Conductor, conductor => conductor.cargamentos, {nullable: true})
     @JoinColumn()
     conductor: Conductor
 }
